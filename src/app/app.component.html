@@ -3,28 +3,18 @@
 <main class="main">
   <div class="content">
     <div class="left-side">
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
       <mat-toolbar>
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-          <mat-icon>menu</mat-icon>
+          <mat-icon>commute</mat-icon>
         </button>
-        <span>My App</span>
+        <span>Vehicle Information Management Application</span>
         <span class="example-spacer"></span>
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <mat-icon>favorite</mat-icon>
-        </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-          <mat-icon>share</mat-icon>
-        </button>
         <button mat-raised-button color="primary" class="example-icon" (click)="openVehicleForm()">
           Add Vehicle
         </button>
       </mat-toolbar>
       <vehicle-details [refreshDetails]="refreshDetails" (editVehicleInformation)="editVehicleInformation($event)" ></vehicle-details>
     </div>
-
-
   </div>
 
 </main>
