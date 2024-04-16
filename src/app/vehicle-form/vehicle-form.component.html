@@ -1,0 +1,57 @@
+<div mat-dialog-title>
+    <h1>Add Vehicle Information</h1>
+  </div>
+<form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()" class="content">
+  <div mat-dialog-content>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Make</mat-label>
+        <input matInput id="make1" type="text"  formControlName="make" placeholder="Ex. Bugatti">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Model</mat-label>
+        <input matInput id="model1" type="text" formControlName="model" placeholder="Ex. Super">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Release Year</mat-label>
+        <input matInput id="year1" type="number" formControlName="year" placeholder="Ex. 2024">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Vehicle identification number</mat-label>
+        <input matInput id="vin1" type="text" formControlName="vin" placeholder="Ex. 4Y1-SL658-4-8-Z-41-1439">
+      </mat-form-field>
+    </div>
+
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" (click)="onCancel()">Cancel</button>
+    <button mat-raised-button type="submit" color="primary">{{ vehicle? 'Update': 'Save' }}</button>
+  </div>
+</form>
+
+<!--<form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()" class="vehicle-form">
+
+  <label for="make">Make of the Vehicle: </label>
+  <input id="make" type="text" formControlName="make">
+
+  <label for="model">Model: </label>
+  <input id="model" type="text" formControlName="model">
+
+  <label for="year">Year: </label>
+  <input id="year" type="number" formControlName="year">
+
+  <label for="vin">Vin: </label>
+  <input id="vin" type="text" formControlName="vin">
+
+  /*<mat-checkbox id="update" formControlName="updateVehicle"></mat-checkbox>*/
+
+  <button type="submit" [disabled]="!vehicleForm.valid">Submit</button>
+
+</form>-->
+
