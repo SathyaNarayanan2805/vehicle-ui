@@ -1,5 +1,5 @@
 <div mat-dialog-title>
-    <h1>Add Vehicle Information</h1>
+    <h1>{{ vehicle? 'Update': 'Add' }} Vehicle Information</h1>
   </div>
 <form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()" class="content">
   <div mat-dialog-content>
